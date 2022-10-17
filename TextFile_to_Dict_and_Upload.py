@@ -8,9 +8,10 @@ feedback_dict = {}
 
 # return a list of all files and directories in specified directory
 for entry in os.listdir(directory):
+  path = str(directory) + str(entry)
   #check if entry is a file
-  if os.path.isfile(entry):
-    with open(str(directory) + str(entry)) as input:
+  if os.path.isfile(path):
+    with open(path) as input:
       input_line = input.read().split('/n')
       feedback_dict['title'] = input_line[0].strip()
       feedback_dict['name'] = input_line[1].strip()
