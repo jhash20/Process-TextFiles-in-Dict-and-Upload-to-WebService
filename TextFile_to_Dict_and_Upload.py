@@ -13,7 +13,7 @@ for entry in os.listdir(directory):
   #check if entry is a file
   if os.path.isfile(path):
     with open(path) as input:
-      input_line = input.read().splitlines()
+      input_line = input.read().split('\n')
       feedback_dict['title'] = input_line[0].strip()
       feedback_dict['name'] = input_line[1].strip()
       feedback_dict['date'] = input_line[2].strip()
