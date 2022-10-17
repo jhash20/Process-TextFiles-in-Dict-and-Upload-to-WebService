@@ -3,7 +3,7 @@
 Python script to process text files containing feedback into a Python dictionary and then upload to a running Django Web service
 
 
-Project Problem Statement:
+Problem Statement:
 
 To complete this module, you'll write a script that interacts with a running web service.
 The web service is part of your company's website and is in charge of storing and displaying the customer reviews of the customer reviews of the company.
