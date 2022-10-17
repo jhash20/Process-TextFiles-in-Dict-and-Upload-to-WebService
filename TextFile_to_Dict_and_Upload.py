@@ -12,10 +12,10 @@ for entry in os.listdir(directory):
   if os.path.isfile(entry):
     with open(str(directory) + str(entry)) as input:
       input_line = input.read().split('/n')
-      feedback_dict['title'] = input_line[0]
-      feedback_dict['name'] = input_line[1]
-      feedback_dict['date'] = input_line[2]
-      feedback_dict['feedback'] = input_line[2:]
+      feedback_dict['title'] = input_line[0].strip()
+      feedback_dict['name'] = input_line[1].strip()
+      feedback_dict['date'] = input_line[2].strip()
+      feedback_dict['feedback'] = input_line[3].strip()
   else:
     # prints error message that did not process entry since it wasn't a file
     print("Error: Did not process; entry is not a file: " + str(entry))
