@@ -11,7 +11,7 @@ import requests
 import json
 
 
-directory = '/data/feedback/'
+directory = "/data/feedback/"
 feedback_dict = {}
 
 # iterates through entries in directory
@@ -21,7 +21,7 @@ for entry in os.listdir(directory):
   if os.path.isfile(path):
     with open(path) as input:
       # splits by line and then adds the lines as values in dictionary
-      input_line = input.read().split('\n')
+      input_line = input.read().split("\n")
       feedback_dict['title'] = input_line[0].strip()
       feedback_dict['name'] = input_line[1].strip()
       feedback_dict['date'] = input_line[2].strip()
